@@ -1,0 +1,126 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_salePrice",
+						"type": "uint256"
+					}
+				],
+				"name": "royaltyInfo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Implementation of the NFT Royalty Standard, a standardized way to retrieve royalty payment information. Royalty information can be specified globally for all token ids via {_setDefaultRoyalty}, and/or individually for specific token ids via {_setTokenRoyalty}. The latter takes precedence over the first. Royalty is specified as a fraction of sale price. {_feeDenominator} is overridable but defaults to 10000, meaning the fee is specified in basis points by default. IMPORTANT: ERC-2981 only specifies a way to signal royalty information and does not enforce its payment. See https://eips.ethereum.org/EIPS/eip-2981#optional-royalty-payments[Rationale] in the EIP. Marketplaces are expected to voluntarily pay royalties together with sales, but note that this standard is not yet widely supported. _Available since v4.5._",
+			"kind": "dev",
+			"methods": {
+				"royaltyInfo(uint256,uint256)": {
+					"details": "Returns how much royalty is owed and to whom, based on a sale price that may be denominated in any unit of exchange. The royalty amount is denominated and should be paid in that same unit of exchange."
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ERC2981.sol": "ERC2981"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ERC165.sol": {
+			"keccak256": "0x847fd3fb0bb6946e86e0da7060f08df5961ec874b4f93de2438b835b92edfd08",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b85ed4a7ffd8067845fc390c896e4f49f78d4de1be291b76eda465f941e4e0c",
+				"dweb:/ipfs/QmbvCXfbTtEq4C1hpVjHGWCUVC5KdZHTCADWDwLYrYJZ88"
+			]
+		},
+		"contracts/ERC2981.sol": {
+			"keccak256": "0xc18061c31bb13feb57358d6538aa2ffd7d0d5db43ab71bd9951ab8d3d8fb2956",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5302da87ea909cb7c37de0302f6073f739dfd16b02821766aa4a24fe618a3d1d",
+				"dweb:/ipfs/Qmf83SwWHZdDBh4D9MoGyD1ZGCFPvgLExL1RMThZPzLMmz"
+			]
+		},
+		"contracts/IERC165.sol": {
+			"keccak256": "0x3213cb47aba4f8ba951dc5671d44e3559fecec1e9c402e679fbb5ada255fdff1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc2296c533793e4c2a6eb4909bd2ca8e99044aff82e3fe2049092bd3f62034a3",
+				"dweb:/ipfs/QmVwAULUUqeXLdggzzW1C3hdNUZbqHoCskoGyfzZ5EKcwW"
+			]
+		},
+		"contracts/IERC2981.sol": {
+			"keccak256": "0x32b8046eb58fb5d30ac8f356a5aa94adda34c3a4a549d49dbdd410b6a58e6d8c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a3ddf7aba201d12082688aab0e2869ae5c827d3873bd3210deda1984acdd7c5a",
+				"dweb:/ipfs/QmW4dwqPp6aA1daTLVsjJMfGCH7JnprT5Qg2QMrQxasZJS"
+			]
+		}
+	},
+	"version": 1
+}

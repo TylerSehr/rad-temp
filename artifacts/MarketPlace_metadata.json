@@ -1,0 +1,817 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ara",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_marketFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_waiver",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
+					}
+				],
+				"name": "attachId",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "offerId",
+						"type": "uint256"
+					}
+				],
+				"name": "acceptOffer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "araToken",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "auctionId",
+						"type": "uint256"
+					}
+				],
+				"name": "bidAuction",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleId",
+						"type": "uint256"
+					}
+				],
+				"name": "buySimpleOffer",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "offerId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelOffer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "nftContract",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nftId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duration",
+						"type": "uint256"
+					}
+				],
+				"name": "createAuction",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "nftContract",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nftId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "createPassiveOffer",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "nftContract",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nftId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "createSimpleOffer",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "auctionId",
+						"type": "uint256"
+					}
+				],
+				"name": "endAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "auctionId",
+						"type": "uint256"
+					}
+				],
+				"name": "getAuction",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "offerId",
+						"type": "uint256"
+					}
+				],
+				"name": "getPassive",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleId",
+						"type": "uint256"
+					}
+				],
+				"name": "getSimpleSale",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "marketPlaceFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "onERC721Received",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "auctionId",
+						"type": "uint256"
+					}
+				],
+				"name": "redeemAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "offerId",
+						"type": "uint256"
+					}
+				],
+				"name": "rejectOffer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleId",
+						"type": "uint256"
+					}
+				],
+				"name": "removeSimpleOffer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ara",
+						"type": "address"
+					}
+				],
+				"name": "setARA",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_marketFee",
+						"type": "uint256"
+					}
+				],
+				"name": "setFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_waiver",
+						"type": "uint256"
+					}
+				],
+				"name": "setWaiver",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "setWallet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "updateSimpleOffer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "waiver",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "../scripts/web3-lib.ts",
+			"details": "ContractDescription",
+			"kind": "dev",
+			"methods": {
+				"acceptOffer(uint256)": {
+					"details": "Nft owner accepts the offer. Funds are transferred to the nft owner, nft is trasnferred to offerer  The marketplace charges a fee to the seller unless they own a sufficent amount of _ara. The nft will be transfered to the bidder and the adjusted payment will be trasferred to the seller;",
+					"params": {
+						"offerId": "Offer id"
+					}
+				},
+				"bidAuction(uint256)": {
+					"details": "Bids on an auction. If the bid is higher than the current bid, refund the previoud bidder, and place the current bid in escrow",
+					"params": {
+						"auctionId": "Auction to bid on"
+					}
+				},
+				"buySimpleOffer(uint256)": {
+					"details": "Buy a NFT that was put for sale; The marketplace charges a fee to the seller unless they own a sufficent amount of _ara. The nft will be transfered to the buyer and the adjusted payment will be trasferred to the seller;",
+					"params": {
+						"saleId": "The sale to buy"
+					}
+				},
+				"cancelOffer(uint256)": {
+					"details": "Cancel offer. Funds are sent back to offerrer;",
+					"params": {
+						"offerId": "Offer id"
+					}
+				},
+				"constructor": {
+					"params": {
+						"_ara": "Waiver token",
+						"_marketFee": "Seller fee",
+						"_waiver": "Amount of _ara needed to wave market fee"
+					}
+				},
+				"createAuction(address,uint256,uint256,uint256,uint256)": {
+					"details": "Updates an NFT sale with a new price",
+					"params": {
+						"duration": "The duration of the sale (in seconds)",
+						"nftContract": "The token contract",
+						"nftId": "The token id",
+						"price": "The minimum price to be met",
+						"startTime": "The starting time of the auction (in epoch time)"
+					}
+				},
+				"createPassiveOffer(address,uint256,uint256)": {
+					"details": "User makes an offer to buy an nft. The funds are moved into escrow",
+					"params": {
+						"nftContract": "The token contract",
+						"nftId": "The token id",
+						"price": "Offering price"
+					}
+				},
+				"createSimpleOffer(address,uint256,uint256)": {
+					"details": "Put up an NFT for sale at a fixed price. Nft will move into escrow",
+					"params": {
+						"nftContract": "The token contract",
+						"nftId": "The tokenId.",
+						"price": "Price"
+					},
+					"returns": {
+						"_0": "saleId The id of the sale that was created"
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"redeemAuction(uint256)": {
+					"details": "Highest bidder can redeem their nft if their bid macthes our outmatches the price set  by seller, and if the auction has ended  The marketplace charges a fee to the seller unless they own a sufficent amount of _ara. The nft will be transfered to the bidder and the adjusted payment will be trasferred to the seller;",
+					"params": {
+						"auctionId": "Auction to bid on"
+					}
+				},
+				"rejectOffer(uint256)": {
+					"details": "Nft owner rejects the offer. Funds go back to offerer",
+					"params": {
+						"offerId": "Offer id"
+					}
+				},
+				"removeSimpleOffer(uint256)": {
+					"details": "Removes an NFT from sale, NFT will be sent back to owner",
+					"params": {
+						"saleId": "The sale to remove"
+					}
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				},
+				"updateSimpleOffer(uint256,uint256)": {
+					"details": "Updates an NFT sale with a new price",
+					"params": {
+						"saleId": "The sale to update"
+					}
+				}
+			},
+			"title": "ContractName",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/marketplace.sol": "MarketPlace"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Address.sol": {
+			"keccak256": "0x4f82ac554df2b88092b0dff60e01918ddb7b4d34935150ad5a82c03ce83ed225",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d452f560e273b2c7c5b83bb29826ee164deb9aac4a0489452368f303227edd7",
+				"dweb:/ipfs/QmTj2yeCDKwy4pa4oNZ1b5NeQf9X6X4cn5k4pL9EqTpJs5"
+			]
+		},
+		"contracts/Context.sol": {
+			"keccak256": "0x2c36c9489879b7c91cdd73bbe8b2584f401aa26f4f252c04f053e824d6ca75c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ef20575fc12fd27f252acd28a8d0f65893832f29fd9c82f7ec165121af4572f",
+				"dweb:/ipfs/QmZMCoWWDTjhs1CNFMWv4JNWVyyeuzyqteCHhF4heCUYJJ"
+			]
+		},
+		"contracts/ERC165.sol": {
+			"keccak256": "0x847fd3fb0bb6946e86e0da7060f08df5961ec874b4f93de2438b835b92edfd08",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b85ed4a7ffd8067845fc390c896e4f49f78d4de1be291b76eda465f941e4e0c",
+				"dweb:/ipfs/QmbvCXfbTtEq4C1hpVjHGWCUVC5KdZHTCADWDwLYrYJZ88"
+			]
+		},
+		"contracts/ERC20.sol": {
+			"keccak256": "0x255da5c49eae60d95ced329e73f26b514d5ac36bf727e09186acdfd4303e847f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0097d7f90624c38dd4f9f254ff0dc0f1d144bd76bbea3dd1cb2f45877ada3fcd",
+				"dweb:/ipfs/QmS4wQRH8r7vanDJq9ZJv6yH4amjuUkPX8NcCqhLfvsEvv"
+			]
+		},
+		"contracts/ERC2981.sol": {
+			"keccak256": "0xc18061c31bb13feb57358d6538aa2ffd7d0d5db43ab71bd9951ab8d3d8fb2956",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5302da87ea909cb7c37de0302f6073f739dfd16b02821766aa4a24fe618a3d1d",
+				"dweb:/ipfs/Qmf83SwWHZdDBh4D9MoGyD1ZGCFPvgLExL1RMThZPzLMmz"
+			]
+		},
+		"contracts/ERC721.sol": {
+			"keccak256": "0xc92d0e065f8b5575e2a01ec54c340a5e6a9b2ea42414da339ae9ba0f839a37bc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a49e921fcb267840a63088356cc8c72f219a7a5a8d885dfb73f96707330dfe7c",
+				"dweb:/ipfs/QmRLK39MihooKLZEGQC5jiKs1PFnWzqGrDJT33HVhhB3py"
+			]
+		},
+		"contracts/IERC165.sol": {
+			"keccak256": "0x3213cb47aba4f8ba951dc5671d44e3559fecec1e9c402e679fbb5ada255fdff1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc2296c533793e4c2a6eb4909bd2ca8e99044aff82e3fe2049092bd3f62034a3",
+				"dweb:/ipfs/QmVwAULUUqeXLdggzzW1C3hdNUZbqHoCskoGyfzZ5EKcwW"
+			]
+		},
+		"contracts/IERC20.sol": {
+			"keccak256": "0x1f32a75186bb2aaa1f9a4c13a4bf5a603b4af5dc2dfd9c8f71483b34f7f556c1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9460ab52630c472d623084d34ab505eb4abfe9d0fdb44bfe46046e3fdb38c93",
+				"dweb:/ipfs/QmasRT1jYUAsRWDSvt4mfTfZH1jdP8uvUUzvsRWdRDN3uS"
+			]
+		},
+		"contracts/IERC20Metadata.sol": {
+			"keccak256": "0x1ffe2047e11fcdd75b2aca845ef3428d93765011f9bdb0ca7bf5d9f95f62656a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b608f183a24077b867dcf21b1e5956b431291324b6025cbb864eb295e005307",
+				"dweb:/ipfs/QmPsgCmqe4HYkFpvYJGWWbkLoQEdhWDzmhG6Lv54FXua8W"
+			]
+		},
+		"contracts/IERC2981.sol": {
+			"keccak256": "0x32b8046eb58fb5d30ac8f356a5aa94adda34c3a4a549d49dbdd410b6a58e6d8c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a3ddf7aba201d12082688aab0e2869ae5c827d3873bd3210deda1984acdd7c5a",
+				"dweb:/ipfs/QmW4dwqPp6aA1daTLVsjJMfGCH7JnprT5Qg2QMrQxasZJS"
+			]
+		},
+		"contracts/IERC721.sol": {
+			"keccak256": "0x027d8046fb57c9617c5e0bd9f0f8f83f35d7d5be8024edb6fedc99a38b7da454",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d07b0bb6a05a02730e1c635de21414b763dece715d9dcf6c745b5b7334b99893",
+				"dweb:/ipfs/QmcddFJy5i925jFJjTVVjvoYtVqvJEkVVpZaYzje8zPmdP"
+			]
+		},
+		"contracts/IERC721Metadata.sol": {
+			"keccak256": "0xbd2f66fddef3b5180deb1c8bef90ae0a356f85c25dc7ef52fc663dea2b449ff4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f0ba681d1360880d7fb5457223586f550029f430bea9a7b34400eb63c4c3ecae",
+				"dweb:/ipfs/QmTZGYJQJDE8nSuHFHshuc1fYSwdWJuEXVBZ9vUQKF6ao8"
+			]
+		},
+		"contracts/IERC721Receiver.sol": {
+			"keccak256": "0xf519c884616195e754dcc17993b01095b97ee7c63f695a8b99d351a143195201",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://31d5c889c1bc19d04642d2d6cd3b58bc557f594b9fa67ec05d896366da5f51a4",
+				"dweb:/ipfs/QmVVn4QxiSBBw1hgM7wuA5np2kGiVnn3P59zowzEuhqbyR"
+			]
+		},
+		"contracts/Ownable.sol": {
+			"keccak256": "0x5eeb86897007c578f301464fceac720c7330486c54ae85c0c09068b46197cfb9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://edefd9ff4f087a3016763a687eaae449c0e8f6dcda9d86032a49de900f129050",
+				"dweb:/ipfs/Qmc4adiPdGKgEJLxqgd8JuKkwrNBNtB78kkGinnnuUnyJN"
+			]
+		},
+		"contracts/Strings.sol": {
+			"keccak256": "0x0829b081483a3608ba02133a8a0a962923d615eeee81f241b6060729b116ff34",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://724cf3f3fe534f1b1125481575f4a67995ca7b5208f09d816bad1f8f88ea3982",
+				"dweb:/ipfs/QmRpW8ePw8kXiLAL8NoKpxqxmFmMNLM748LADun5zDAen7"
+			]
+		},
+		"contracts/generic721.sol": {
+			"keccak256": "0xec86e5e5f2a44bd54aba8a53c6792cacfa49417ec08eeadf9360828b0a782898",
+			"urls": [
+				"bzz-raw://cb69f262cecb85d9694811a59d5967aaf83ae6a8076cda0c4f57eef7c5ad9cde",
+				"dweb:/ipfs/QmRzk5EZPFLcg2BPUvKWvYrbjWqwB2aZLU9D6WnajrproT"
+			]
+		},
+		"contracts/marketplace.sol": {
+			"keccak256": "0x11888bf3b9ac5ce8efdfefebd1c4cf75cf59884c25524569e83e27e238516df9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9b1d3b71bbd0c4e02dd7afa4f4b440bf3d147417a2423f9dbae0046aa026391c",
+				"dweb:/ipfs/QmZQShawSmf2FTnYyj7aYynz6J53LaSzrH5e8pbtbyLDDg"
+			]
+		}
+	},
+	"version": 1
+}
